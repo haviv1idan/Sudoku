@@ -142,7 +142,7 @@ def print_board():
         num_count = 0
         for i in range(9):
             for j in range(9):
-                if copy_board[i][j] == num:
+                if copy_board[i][j] == num or board[i][j] == num:
                     num_count += 1
                     row = copy_board[i]
                     if check_more_than_one(num, row):
