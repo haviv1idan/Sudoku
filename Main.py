@@ -26,9 +26,9 @@ pygame.display.set_caption('Sudoku')
 
 
 def print_message(msg, pos=(0, 0), font_size=18, background_color=colors['white'], font_color=colors['red']):
-    font = pygame.font.Font('freesansbold.ttf', font_size)          # defined the font of text
-    text = font.render(msg, True, font_color, background_color)     # create the text object
-    screen.blit(text, pos)                                          # print the text in screen
+    font = pygame.font.Font('freesansbold.ttf', font_size)                             # defined the font of text
+    text = font.render(msg, True, font_color, background_color)                                   # create the text object
+    screen.blit(text, pos)                                                # print the text in screen
 
 
 def copy_boards():
@@ -132,7 +132,7 @@ def print_board():
             pygame.draw.rect(screen, colors['black'], [LINE + (LINE * j), LINE + (LINE * i), LINE, LINE], 1)
             if board[i][j] != 0:
                 print_message(str(board[i][j]), (LINE + LINE * j + LINE // 3, LINE + LINE * i + LINE // 3), 24)
-            if copy_board[i][j] != 0:
+            elif copy_board[i][j] != 0:
                 print_message(str(copy_board[i][j]), (LINE + LINE * j + LINE // 3, LINE + LINE * i + LINE // 3), 24)
 
     print(copy_board)
@@ -208,7 +208,7 @@ def is_safe(num, i, j):
 def find_empty_location(l):
     for row in range(9):
         for col in range(9):
-            if board[row][col] == 0 and copy_board[row][col] != complete_board[row][col]:
+            if board[row][col] == 0:
                 l[0] = row
                 l[1] = col
                 return True
