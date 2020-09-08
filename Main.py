@@ -26,9 +26,9 @@ pygame.display.set_caption('Sudoku')
 
 
 def print_message(msg, pos=(0, 0), font_size=18, background_color=colors['white'], font_color=colors['red']):
-    font = pygame.font.Font('freesansbold.ttf', font_size)                             # defined the font of text
-    text = font.render(msg, True, font_color, background_color)                                   # create the text object
-    screen.blit(text, pos)                                                # print the text in screen
+    font = pygame.font.Font('freesansbold.ttf', font_size)          # defined the font of text
+    text = font.render(msg, True, font_color, background_color)     # create the text object
+    screen.blit(text, pos)                                          # print the text in screen
 
 
 def copy_boards():
