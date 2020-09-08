@@ -14,7 +14,7 @@ pygame.init()
 # SPEED = float(input("Enter speed solving: "))
 SPEED = 0.001
 # Easy => 20 - 35, Medium => 35 - 45, Hard => 45 - 65
-K = 2
+K = 40
 SIZE = 660
 LINE = SIZE // 11
 selected_square = {'x': LINE * 9, 'y': LINE * 9}
